@@ -15,7 +15,6 @@ interface Props{
   horrorMovies: Movie[]
   romanceMovies: Movie[]
   documentaries: Movie[]
-  // products: Product[]
 }
 
 const Home = ({ 
@@ -27,7 +26,6 @@ const Home = ({
   romanceMovies,
   topRated,
   trendingNow,
-  // products, 
 }: Props) => {
   return (
     <div className="relative h-screen bg-gradient-to-b lg:h-[140vh]">

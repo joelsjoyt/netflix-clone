@@ -27,7 +27,8 @@ const Home = ({
   romanceMovies,
   topRated,
   trendingNow,
-  products, }: Props) => {
+  // products, 
+}: Props) => {
   return (
     <div className="relative h-screen bg-gradient-to-b lg:h-[140vh]">
     <Head>

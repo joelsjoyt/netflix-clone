@@ -1,8 +1,12 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import { useRecoilValue } from 'recoil'
+import { modalState } from '../atoms/modelAtom'
 import Banner from '../components/Banner'
 import Header from '../components/Header'
+import Modal from '../components/Modal'
 import Row from '../components/Row'
+import useAuth from '../hooks/useAuth'
 import { Movie } from '../typing'
 import requests from '../utils/requests'
 
@@ -15,6 +19,7 @@ interface Props{
   horrorMovies: Movie[]
   romanceMovies: Movie[]
   documentaries: Movie[]
+  products: Product[]
 }
 
 const Home = ({ 
@@ -26,7 +31,14 @@ const Home = ({
   romanceMovies,
   topRated,
   trendingNow,
-}: Props) => {
+  products,
+ }: Props) => {
+
+  const { loading } = useAuth()
+  const showMmodal = useRecoilValue(modalState)
+
+  if (loading) return null
+  
   return (
     <div className="relative h-screen bg-gradient-to-b lg:h-[140vh]">
     <Head>
@@ -51,7 +63,7 @@ const Home = ({
           <Row title="Documentaries" movies={documentaries} />
       </section>
     </main>
-    {/* Modal */}
+    { showMmodal && <Modal/> } 
 
   </div>
   )

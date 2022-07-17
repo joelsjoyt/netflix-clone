@@ -19,7 +19,7 @@ interface Props{
   horrorMovies: Movie[]
   romanceMovies: Movie[]
   documentaries: Movie[]
-  products: Product[]
+  // products: Product[]
 }
 
 const Home = ({ 
@@ -31,7 +31,7 @@ const Home = ({
   romanceMovies,
   topRated,
   trendingNow,
-  products,
+  // products,
  }: Props) => {
 
   const { loading } = useAuth()

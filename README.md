@@ -1,4 +1,4 @@
-#Live Demo
+# Live Demo
 https://netflix-clone-i7ymheo5g-joelsjoyt.vercel.app/
 
 # Next.js + Tailwind CSS Example
